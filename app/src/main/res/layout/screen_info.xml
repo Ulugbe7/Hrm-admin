@@ -38,7 +38,52 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Android" />
 
+        <ImageButton
+            android:id="@+id/btnCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@drawable/ic_money"
+            app:layout_constraintBottom_toBottomOf="@+id/txtName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtName" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/containerPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputHoursPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Summani kiriting"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="#D3D3D3" />
+
+        <ImageButton
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@drawable/baseline_check_24" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/top_container"
@@ -49,7 +94,7 @@
         android:paddingHorizontal="8dp"
         android:paddingBottom="4dp"
         android:weightSum="3"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/containerPrice">
 
         <TextView
             android:layout_width="0dp"
@@ -78,6 +123,7 @@
             android:textColor="@color/black"
             android:textSize="16sp" />
     </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvWorkHistory"

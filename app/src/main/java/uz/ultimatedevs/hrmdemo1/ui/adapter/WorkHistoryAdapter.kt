@@ -34,7 +34,7 @@ class WorkHistoryAdapter :
                 val d = getItem(absoluteAdapterPosition)
                 txtDate.text = d.date
                 txtStartHour.text = d.startHour
-                txtEndHour.text = d.startHour
+                txtEndHour.text = d.endHour
             }
         }
     }
